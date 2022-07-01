@@ -1,0 +1,60 @@
+{
+  "name": "ps-ui-rdr3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "build",
+  "scripts": {
+    "build": "yarn build-scripts && yarn build-nui",
+    "build-scripts": "webpack --mode production",
+    "watch-scripts": "webpack --mode development --watch true",
+    "build-nui": "npm run b_nui",
+    "watch-nui": "npm run w_nui",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\"",
+    "b_nui": "craco build",
+    "w_nui": "craco start"
+  },
+  "author": "Rory Pearson (Mezmerizxd)",
+  "license": "ISC",
+  "dependencies": {
+    "@citizenfx/client": "^1.0.2792-1",
+    "@citizenfx/server": "^1.0.2792-1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^16.6.2",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "craco": "^0.0.3",
+    "cross-env": "^7.0.3",
+    "prettier": "^2.7.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "remove-files-webpack-plugin": "^1.4.3",
+    "sass": "^1.42.1",
+    "ts-loader": "^8.0.2",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
